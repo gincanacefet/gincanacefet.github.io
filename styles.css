@@ -2,6 +2,10 @@
     font-family: Antipasto;
     src:url(Antipasto.ttf);
 }
+@font-face{
+    font-family: Impact;
+    src:url(impact.ttf);
+}
 @keyframes fadeIn {
     from{
         opacity: 0;

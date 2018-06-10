@@ -48,6 +48,18 @@
     font-family: Antipasto;
     src:url(Antipasto.ttf);
 }
+@font-face{
+    font-family: Impact;
+    src:url(impact.ttf);
+}
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+      to{
+        opacity: 1;
+    }
+}
 html{
     margin: 0;
     background-color: rgb(0, 180, 235);
@@ -202,4 +214,7 @@ a:active{
 }
 #mais:hover{
     cursor: move;
+}
+#mais ~ li:not(:last-child){
+    animation: fadeIn 0.6s;
 }
