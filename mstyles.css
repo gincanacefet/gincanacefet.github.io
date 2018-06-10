@@ -234,5 +234,5 @@ a:active{
   list-style-type: none;
 }
 #menos:hover{
-	  cursor: move;
+    cursor: context-menu;
 }

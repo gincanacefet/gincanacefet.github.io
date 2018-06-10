@@ -202,5 +202,5 @@ a:active{
     animation: fadeIn 0.6s;
 }
 #menos:hover{
-	  cursor: move;
+    cursor: context-menu;
 }
