@@ -48,7 +48,7 @@ function transition(){
             swapall(img1El);
 
         }, 2000);
-        
+
     }else{
         img2El.classList.add('invisible');
 
@@ -60,7 +60,7 @@ function transition(){
             swapall(img2El);
 
         }, 2500);
-        
+
     }
 
     doit();
@@ -69,28 +69,35 @@ function transition(){
 /**********************/
 
 let maisEl=document.querySelector("#mais");
+let menosEl=document.querySelector("#menos");
 
 maisEl.addEventListener('click', function(){
-    if(maisEl.style.display=='block')expand(); else retract();
+    expand();
+}
+);
+menosEl.addEventListener('click', function(){
+    retract();
 }
 );
 
 retract();
 
 function expand(){
-    maisEl.style.display="none";
     let expanded=document.querySelectorAll("#mais ~ li:not(:last-child)");
-    
+
     for(let i=0; i<expanded.length; i++){
         expanded[i].style.display='list-item';
     }
+    maisEl.style.display="none";
+    menosEl.style.display="block";
 }
 
 function retract(){
-    maisEl.style.display="block";
     let expanded=document.querySelectorAll("#mais ~ li:not(:last-child)");
-    
+
     for(let i=0; i<expanded.length; i++){
         expanded[i].style.display='none';
     }
+    maisEl.style.display="block";
+    menosEl.style.display="none";
 }
